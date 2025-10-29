@@ -1,0 +1,20 @@
+{
+  "name": "cat-energy-test",
+  "version": "1.0.0",
+  "description": "Ссылка на макет в Figma по которому выполнена верстка:\r https://www.figma.com/design/gqM9B9ZUTgcmVXsQ2W7V8C/%D0%9A%D1%8D%D1%82-%D1%8D%D0%BD%D0%B5%D1%80%D0%B4%D0%B6%D0%B8---landing--Copy-?node-id=0-1&p=f&t=xnopfpNFvHfEDyKH-0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel sass:watch start",
+    "sass:build": "sass src/scss/styles.scss styles.css --no-source-map",
+    "sass:watch": "sass --watch src/scss/styles.scss styles.css --no-source-map",
+    "sass:prod": "sass src/scss/styles.scss styles.css --style=compressed --no-source-map",
+    "start": "live-server ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.93.2"
+  }
+}
