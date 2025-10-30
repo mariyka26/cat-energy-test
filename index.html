@@ -7,5 +7,61 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="./script.js" type="module"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header" role="banner">
+      <div class="container header__inner">
+        <a href="/" class="logo" aria-label="Cat Energy">
+          <picture>
+            <source
+              srcset="./assets/img/logo-mobile.svg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./assets/img/logo-tablet.svg"
+              media="(max-width: 1279px)"
+            />
+            <img
+              src="./assets/img/logo-desktop.svg"
+              alt="Cat Energy logo"
+              class="logo__img"
+            />
+          </picture>
+          <span class="logo__text">
+            <span class="logo__text-part logo__text-part--cat">Cat</span>
+            <span class="logo__text-part logo__text-part--energy">Energy</span>
+          </span>
+        </a>
+
+        <nav class="nav" role="navigation" aria-label="Главное меню">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="#">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Каталог продукции</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger"><span></span></div>
+      </div>
+    </header>
+
+    <main class="main" role="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">Функциональное питание для котов</h1>
+            <p class="hero__subtitle">Занялся собой? Займись котом!</p>
+            <a class="button hero__cta" href="#program">Подобрать программу</a>
+          </div>
+
+          <div class="hero__background"></div>
+          <div class="hero__product"></div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,32 @@
+// Основные цвета
+$color-primary: #68b738;
+$color-primary-dark: #549e2f;
+$color-dark: #000000;
+$color-light: #ffffff;
+
+// Фоны
+$color-bg-light: $color-light;
+$color-bg-gray: #f2f2f2;
+
+// Текста
+$color-text-main: $color-dark;
+$color-text-accent: #111111;
+$color-text-secondary: #444444;
+$color-text-light: $color-light;
+
+// Границы, декоративные элементы
+$color-border: #cdcdcd; // рамки, разделители
+$color-icon: #666666; // иконки, декоративные элементы
+
+// typography
+$font-family-base: "Oswald", sans-serif;
+$font-size-base: 16px;
+
+// font sizes
+$font-size-xxl: 3.75rem; // 60px
+$font-size-xl: 2.25rem; // 36px
+$font-size-l: 1.875rem; // 30px
+$font-size-m: 1.25rem; // 20px
+$font-size-s: 1.125rem; // 18px
+$font-size-base: 1rem; // 16px
+$font-size-xs: 0.875rem; // 14px
