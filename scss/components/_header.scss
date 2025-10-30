@@ -1,0 +1,189 @@
+@use "../variables" as *;
+@use "../_mixin" as *;
+
+.header {
+  margin: 54px 30px 110px;
+  position: relative;
+  z-index: 3;
+
+  @include respond-to(tablet) {
+    margin: 24px 30px 64px;
+  }
+
+  @include respond-to(mobile) {
+    margin: 11px 20px 45px;
+  }
+
+  &__inner {
+    @include container;
+    @include flex-center(row);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-family: $font-family-base;
+
+    picture {
+      height: 59px;
+      overflow: hidden;
+
+      @include respond-to(tablet) {
+        height: 51px;
+      }
+
+      @include respond-to(mobile) {
+        height: 38px;
+      }
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__text {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-left: 14px;
+
+      @include respond-to(tablet) {
+        font-size: $font-size-m;
+      }
+
+      @include respond-to(mobile) {
+        margin-left: 57px;
+      }
+    }
+    &__text-part {
+      &--cat {
+        color: $color-text-accent;
+        font-weight: 500;
+      }
+      &--energy {
+        color: $color-text-secondary;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .nav {
+    @include respond-to(mobile) {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      gap: 37px;
+    }
+
+    &__link {
+      position: relative;
+      font-size: $font-size-m;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $color-text-light;
+      transition: color 0.3s ease;
+      padding: 6px 0;
+
+      @include respond-to(tablet) {
+        color: $color-text-accent;
+        font-size: $font-size-s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-text-light;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+
+        @include respond-to(tablet) {
+          background-color: $color-primary;
+        }
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  .burger {
+    display: none;
+
+    @media (max-width: 500px) {
+      display: flex;
+      position: relative;
+      z-index: 50;
+      align-items: center;
+      justify-content: flex-end;
+      width: 30px;
+      height: 23px;
+    }
+
+    span {
+      @media (max-width: 500px) {
+        height: 2.5px;
+        width: 100%;
+        transform: scale(1);
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  .burger::before,
+  .burger::after {
+    @media (max-width: 767px) {
+      content: "";
+      position: absolute;
+      height: 2.5px;
+      width: 100%;
+      background-color: $color-dark;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  .burger::before {
+    @media (max-width: 767px) {
+      top: 0;
+    }
+  }
+
+  .burger::after {
+    @media (max-width: 767px) {
+      bottom: 0;
+    }
+  }
+
+  .burger.active span {
+    @media (max-width: 767px) {
+      transform: scale(0);
+    }
+  }
+
+  .burger.active::before {
+    @media (max-width: 767px) {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+  }
+
+  .burger.active::after {
+    @media (max-width: 767px) {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+}

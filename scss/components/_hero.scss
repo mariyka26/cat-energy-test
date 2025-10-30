@@ -1,0 +1,143 @@
+@use "../variables" as *;
+@use "../_mixin" as *;
+
+.hero {
+  background-color: $color-bg-light;
+
+  &__inner {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    min-height: 600px;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 415px;
+    z-index: 4;
+    margin-left: 80px;
+
+    @include respond-to(tablet) {
+      margin-left: 90px;
+    }
+
+    @include respond-to(mobile) {
+      max-width: 300px;
+      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-xxl;
+    font-weight: 400;
+    color: $color-text-accent;
+    line-height: 60px;
+    margin-bottom: 40px;
+
+    @include respond-to(tablet) {
+      color: $color-text-accent;
+    }
+
+    @include respond-to(mobile) {
+      font-size: $font-size-xl;
+      color: $color-light;
+      line-height: 36px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-m;
+    color: $color-text-accent;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 52px;
+
+    @include respond-to(mobile) {
+      color: $color-light;
+    }
+    @include respond-to(mobile) {
+      font-size: $font-size-xs;
+      margin-bottom: 300px;
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    background-color: $color-primary;
+    color: $color-light;
+    padding: 14px 32px;
+    font-size: $font-size-m;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+
+    @include respond-to(mobile) {
+      font-size: $font-size-xs;
+      padding: 14px 0;
+      width: 280px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../assets/img/background-cat-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    z-index: 1;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    @include respond-to(mobile) {
+      background-image: url("../../../assets/img/background-cat-mobile.png");
+      background-position: center top;
+      top: 66px;
+    }
+  }
+
+  &__product {
+    position: absolute;
+    z-index: 2;
+    height: 500px;
+    top: 143px;
+    left: 150px;
+    width: 100%;
+    background-image: url("../../../assets/img/product-can.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include respond-to(tablet) {
+      left: 0;
+      top: 340px;
+      height: 609px;
+    }
+
+    @include respond-to(mobile) {
+      height: 270px;
+      top: 230px;
+      left: 0;
+    }
+  }
+}
