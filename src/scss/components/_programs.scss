@@ -39,6 +39,7 @@
     @include respond-to(tablet) {
       max-width: 780px;
       padding: 77px 50px 50px;
+      margin: 0 30px;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto;
       grid-template-areas:
@@ -84,7 +85,7 @@
       height: 200px;
       align-self: center;
       margin-right: 0;
-      margin-left: 17px;
+      margin-left: 30px;
     }
 
     @include respond-to(mobile) {
@@ -140,6 +141,7 @@
     color: $color-text-main;
     line-height: 36px;
     text-transform: uppercase;
+    white-space: nowrap;
 
     @include respond-to(tablet) {
       margin-bottom: 24px;
@@ -148,7 +150,6 @@
     @include respond-to(mobile) {
       font-size: $font-size-ml;
       line-height: 37px;
-      white-space: nowrap;
     }
   }
   &__text {
