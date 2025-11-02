@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Energy</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./script.js" type="module"></script>
   </head>
   <body>
@@ -227,6 +228,27 @@
               />
               <span class="example__label example__label--after">Стало</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container contacts__inner">
+          <div class="contacts__info">
+            <h4 class="contacts__title">
+              ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!
+            </h4>
+            <address class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </address>
+          </div>
+          <div class="contacts__map-wrapper">
+            <div
+              id="map"
+              class="contacts__map"
+              aria-label="Карта с адресом"
+            ></div>
           </div>
         </div>
       </section>

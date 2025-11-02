@@ -12,3 +12,7 @@ html {
   font-family: $font-family-base;
   font-size: $font-size-base;
 }
+
+body.menu-open {
+  overflow: hidden;
+}

@@ -6,7 +6,6 @@
 }
 
 // Универсальный флекс-контейнер
-// Пример: @include flex-center(row, space-between, center);
 @mixin flex-center($direction: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
@@ -15,8 +14,6 @@
 }
 
 // Адаптивность
-// Используем короткое название, чтобы не писать каждый раз @media
-// Пример: @include respond-to(mobile) { font-size: 14px; }
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == desktop {
@@ -32,29 +29,4 @@
       @content;
     }
   }
-}
-
-// Обнуление списка
-@mixin reset-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-// Текст с обрезкой (если нужно в карточках)
-@mixin text-truncate($lines: 1) {
-  display: -webkit-box;
-  -webkit-line-clamp: $lines;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-// Кнопка (пример для однообразных CTA)
-@mixin button-base {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }

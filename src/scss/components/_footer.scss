@@ -84,6 +84,9 @@
   }
 
   &__academy {
+    :hover {
+      filter: brightness(50%) contrast(80%);
+    }
     @include respond-to(mobile) {
       display: flex;
       width: 100%;
