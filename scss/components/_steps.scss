@@ -56,8 +56,8 @@
     }
 
     @include respond-to(mobile) {
-      @include flex-center(row, space-between, center);
-      max-width: 500px;
+      @include flex-center(row, flex-start, center);
+      max-width: 100%;
       position: static;
     }
   }
