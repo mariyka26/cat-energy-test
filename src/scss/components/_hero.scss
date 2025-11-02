@@ -103,7 +103,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../../assets/img/background-cat-desktop.png");
+    background-image: url("./src/assets/img/background-cat-desktop.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -114,15 +114,15 @@
     }
 
     @include respond-to(mobile) {
-      background-image: url("../../../assets/img/background-cat-mobile.png");
+      background-image: url("./src/assets/img/background-cat-mobile.png");
       background-position: center;
       background-size: cover;
-      object-fit: cover; // (на случай, если внутри <img>, но здесь просто доп. надёжность)
+      object-fit: cover;
       top: 66px;
       width: 100%;
       height: 305px;
-      left: 50%; // центрируем по горизонтали
-      transform: translateX(-50%); // компенсируем смещение
+      left: 50%;
+      transform: translateX(-50%);
       right: auto;
     }
   }
@@ -134,7 +134,7 @@
     top: 143px;
     right: 350px;
     width: 552px;
-    background-image: url("../../../assets/img/product-can.png");
+    background-image: url("./src/assets/img/product-can.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
