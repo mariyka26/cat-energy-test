@@ -32,7 +32,7 @@ function init() {
     },
     {
       iconLayout: "default#image",
-      iconImageHref: "./assets/img/map-pin.png",
+      iconImageHref: "./src/assets/img/map-pin.png",
       iconImageSize: [50, 50],
       iconImageOffset: [-25, -50],
     }
